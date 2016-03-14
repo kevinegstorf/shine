@@ -5,8 +5,9 @@ gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem "haml"
+gem 'haml'
 gem 'devise'
+gem 'bower-rails'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
