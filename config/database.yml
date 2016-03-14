@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: shine_production
-  username: shine
+  username: <%= ENV['POSTGRES_USERNAME'] %>
   password: <%= ENV['SHINE_DATABASE_PASSWORD'] %>
