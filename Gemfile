@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'
 gem 'devise'
 gem 'bower-rails'
+gem 'faker'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
