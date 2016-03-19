@@ -4,7 +4,7 @@
   = form_for :customers, method: :get do |f|
     .input-group.input-group-lg
       = label_tag :keywords, nil, class: "sr-only"
-      = text_field_tag :keywords, nil,                          |
+      = text_field_tag :keywords, @keywords,                    |
         placeholder: "First Name, Last Name, or Email Address", |
         class: "form-control input-lg"                          |
       %span.input-group-btn
@@ -13,17 +13,17 @@
 %section.search-results
   %header
     %h1.h3 Results
-  %table.table.table-striped
-    %thead
-      %tr
-        %th First Name
-        %th Last Name
-        %th Email
-        %th Joined
-    %tbody
-      - @customers.each do |customer|
-        %tr
-          %td= customer.first_name
-          %td= customer.last_name
-          %td= customer.email
-          %td= l customer.created_at.to_date
+  = render partial: "pager", locals: { keywords: @keywords, page: @page }
+  %ol.list-group
+    / ...
+    - @customers.each do |customer|
+      %li.list-group-item.clearfix
+        %h3.pull-right
+          %small.text-uppercase Joined
+          = l customer.created_at.to_date
+        %h2.h3
+          = customer.first_name
+          = customer.last_name
+          %small= customer.username
+        %h4= customer.email
+  = render partial: "pager", locals: { keywords: @keywords, page: @page }
