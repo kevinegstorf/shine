@@ -13,10 +13,10 @@ describe User do
   describe "email" do
 
     # ... rest of the test
-
-    let(:user) {
-      User.create!(email: "foo@example.com",
-                   password: "qwertyuiop",
+    
+    let(:user) { 
+      User.create!(email: "foo@example.com", 
+                   password: "qwertyuiop", 
                    password_confirmation: "qwertyuiop")
     }
     it "absolutely prevents invalid email addresses" do

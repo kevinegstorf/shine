@@ -17,9 +17,6 @@ RSpec.configure do |config|
     mocks.verify_doubled_constant_names = true
   end
 
-  config.filter_run :focus
-  config.run_all_when_everything_filtered = true
-
   config.disable_monkey_patching!
   config.expose_dsl_globally = true
 
@@ -28,7 +25,6 @@ RSpec.configure do |config|
   end
 
   config.profile_examples = 10
-
   config.order = :random
 
   Kernel.srand config.seed

@@ -6,13 +6,9 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/dcbang for more book information.
 #---
-require "rails_helper.rb"
-
-describe "testing that rspec is configured" do
-  it "should pass" do
-    expect(true).to eq(true)
+FactoryGirl.define do
+  factory :user do
+    sequence(:email) { |i| "#{Faker::Internet.user_name}#{i}@example.com" }
+    password "foobarblah"
   end
-  # it "can fail" do
-  #   expect(false).to eq(true)
-  # end
 end
