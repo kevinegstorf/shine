@@ -1,10 +1,15 @@
 {
   "name": "angular",
+<<<<<<< HEAD
   "version": "1.5.3",
+=======
+  "version": "1.5.2",
+>>>>>>> 8efbc9c... added angular and test for it to work
   "license": "MIT",
   "main": "./angular.js",
   "ignore": [],
   "dependencies": {},
+<<<<<<< HEAD
   "_release": "1.5.3",
   "_resolution": {
     "type": "version",
@@ -13,5 +18,15 @@
   },
   "_source": "git://172.31.33.237:6789/angular",
   "_target": "1.5.3",
+=======
+  "_release": "1.5.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.2",
+    "commit": "bec191cd9fe2a09cc76810f41c6c9da9a622fdcb"
+  },
+  "_source": "git://172.31.33.237:6789/angular",
+  "_target": "~> 1.5",
+>>>>>>> 8efbc9c... added angular and test for it to work
   "_originalSource": "angular"
 }

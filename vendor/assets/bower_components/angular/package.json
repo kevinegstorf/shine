@@ -1,6 +1,10 @@
 {
   "name": "angular",
+<<<<<<< HEAD
   "version": "1.5.3",
+=======
+  "version": "1.5.2",
+>>>>>>> 8efbc9c... added angular and test for it to work
   "description": "HTML enhanced for web apps",
   "main": "index.js",
   "scripts": {

@@ -2,8 +2,12 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap-sass-official": "latest",
+<<<<<<< HEAD
     "angular": "~> 1.5",
     "angular-mocks": "latest"
+=======
+    "angular": "~> 1.5"
+>>>>>>> 8efbc9c... added angular and test for it to work
   },
   "resolutions": {
     "angular": "1.5"

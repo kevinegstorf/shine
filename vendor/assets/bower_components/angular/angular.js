@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * @license AngularJS v1.5.3
+=======
+ * @license AngularJS v1.5.2
+>>>>>>> 8efbc9c... added angular and test for it to work
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -57,7 +61,11 @@ function minErr(module, ErrorConstructor) {
       return match;
     });
 
+<<<<<<< HEAD
     message += '\nhttp://errors.angularjs.org/1.5.3/' +
+=======
+    message += '\nhttp://errors.angularjs.org/1.5.2/' +
+>>>>>>> 8efbc9c... added angular and test for it to work
       (module ? module + '/' : '') + code;
 
     for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -2443,11 +2451,19 @@ function toDebugString(obj) {
  * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
  */
 var version = {
+<<<<<<< HEAD
   full: '1.5.3',    // all of these placeholder strings will be replaced by grunt's
   major: 1,    // package task
   minor: 5,
   dot: 3,
   codeName: 'diplohaplontic-meiosis'
+=======
+  full: '1.5.2',    // all of these placeholder strings will be replaced by grunt's
+  major: 1,    // package task
+  minor: 5,
+  dot: 2,
+  codeName: 'differential-recovery'
+>>>>>>> 8efbc9c... added angular and test for it to work
 };
 
 
@@ -5862,6 +5878,7 @@ function Browser(window, document, $log, $sniffer) {
   var cachedState, lastHistoryState,
       lastBrowserUrl = location.href,
       baseElement = document.find('base'),
+<<<<<<< HEAD
       pendingLocation = null,
       getCurrentState = !$sniffer.history ? noop : function getCurrentState() {
         try {
@@ -5870,6 +5887,9 @@ function Browser(window, document, $log, $sniffer) {
           // MSIE can reportedly throw when there is no state (UNCONFIRMED).
         }
       };
+=======
+      pendingLocation = null;
+>>>>>>> 8efbc9c... added angular and test for it to work
 
   cacheState();
   lastHistoryState = cachedState;
@@ -5977,6 +5997,17 @@ function Browser(window, document, $log, $sniffer) {
     fireUrlChange();
   }
 
+<<<<<<< HEAD
+=======
+  function getCurrentState() {
+    try {
+      return history.state;
+    } catch (e) {
+      // MSIE can reportedly throw when there is no state (UNCONFIRMED).
+    }
+  }
+
+>>>>>>> 8efbc9c... added angular and test for it to work
   // This variable should be used *only* inside the cacheState function.
   var lastCachedState = null;
   function cacheState() {
@@ -6828,6 +6859,7 @@ function $TemplateCacheProvider() {
  *    `true` if the specified slot contains content (i.e. one or more DOM nodes).
  *
  * The controller can provide the following methods that act as life-cycle hooks:
+<<<<<<< HEAD
  * * `$onInit()` - Called on each controller after all the controllers on an element have been constructed and
  *   had their bindings initialized (and before the pre &amp; post linking functions for the directives on
  *   this element). This is a good place to put initialization code for your controller.
@@ -6845,6 +6877,11 @@ function $TemplateCacheProvider() {
  *   they are waiting for their template to load asynchronously and their own compilation and linking has been
  *   suspended until that occurs.
  *
+=======
+ * * `$onInit` - Called on each controller after all the controllers on an element have been constructed and
+ *   had their bindings initialized (and before the pre &amp; post linking functions for the directives on
+ *   this element). This is a good place to put initialization code for your controller.
+>>>>>>> 8efbc9c... added angular and test for it to work
  *
  * #### `require`
  * Require another directive and inject its controller as the fourth argument to the linking function. The
@@ -7477,11 +7514,19 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
   function assertValidDirectiveName(name) {
     var letter = name.charAt(0);
     if (!letter || letter !== lowercase(letter)) {
+<<<<<<< HEAD
       throw $compileMinErr('baddir', "Directive/Component name '{0}' is invalid. The first character must be a lowercase letter", name);
     }
     if (name !== name.trim()) {
       throw $compileMinErr('baddir',
             "Directive/Component name '{0}' is invalid. The name should not contain leading or trailing whitespaces",
+=======
+      throw $compileMinErr('baddir', "Directive name '{0}' is invalid. The first character must be a lowercase letter", name);
+    }
+    if (name !== name.trim()) {
+      throw $compileMinErr('baddir',
+            "Directive name '{0}' is invalid. The name should not contain leading or trailing whitespaces",
+>>>>>>> 8efbc9c... added angular and test for it to work
             name);
     }
   }
@@ -7756,6 +7801,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     return debugInfoEnabled;
   };
 
+<<<<<<< HEAD
 
   var TTL = 10;
   /**
@@ -7786,6 +7832,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     return TTL;
   };
 
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
   this.$get = [
             '$injector', '$interpolate', '$exceptionHandler', '$templateRequest', '$parse',
             '$controller', '$rootScope', '$sce', '$animate', '$$sanitizeUri',
@@ -7794,6 +7842,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
     var SIMPLE_ATTR_NAME = /^\w/;
     var specialAttrHolder = document.createElement('div');
+<<<<<<< HEAD
 
 
 
@@ -7824,6 +7873,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     }
 
 
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
     function Attributes(element, attributesToCopy) {
       if (attributesToCopy) {
         var keys = Object.keys(attributesToCopy);
@@ -8689,6 +8740,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             compileNode = $compileNode[0];
             replaceWith(jqCollection, sliceArgs($template), compileNode);
 
+<<<<<<< HEAD
             // Support: Chrome < 50
             // https://github.com/angular/angular.js/issues/14041
 
@@ -8700,6 +8752,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             // TODO: remove this line after Chrome 50 has been released
             $template[0].$$parentNode = $template[0].parentNode;
 
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
             childTranscludeFn = compilationGenerator(mightHaveMultipleTransclusionError, $template, transcludeFn, terminalPriority,
                                         replaceDirective && replaceDirective.name, {
                                           // Don't pass in:
@@ -8982,6 +9036,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           }
         });
 
+<<<<<<< HEAD
         // Handle the init and destroy lifecycle hooks on all controllers that have them
         forEach(elementControllers, function(controller) {
           var controllerInstance = controller.instance;
@@ -8992,6 +9047,12 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             controllerScope.$on('$destroy', function callOnDestroyHook() {
               controllerInstance.$onDestroy();
             });
+=======
+        // Trigger the `$onInit` method on all controllers that have one
+        forEach(elementControllers, function(controller) {
+          if (isFunction(controller.instance.$onInit)) {
+            controller.instance.$onInit();
+>>>>>>> 8efbc9c... added angular and test for it to work
           }
         });
 
@@ -9028,6 +9089,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           );
         }
 
+<<<<<<< HEAD
         // Trigger $postLink lifecycle hooks
         forEach(elementControllers, function(controller) {
           var controllerInstance = controller.instance;
@@ -9036,6 +9098,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           }
         });
 
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
         // This is the function that is injected as `$transclude`.
         // Note: all arguments are optional!
         function controllersBoundTransclude(scope, cloneAttachFn, futureParentElement, slotName) {
@@ -9631,7 +9695,10 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     // only occurs for isolate scopes and new scopes with controllerAs.
     function initializeDirectiveBindings(scope, attrs, destination, bindings, directive) {
       var removeWatchCollection = [];
+<<<<<<< HEAD
       var changes;
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
       forEach(bindings, function initializeBinding(definition, scopeName) {
         var attrName = definition.attrName,
         optional = definition.optional,
@@ -9647,8 +9714,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             }
             attrs.$observe(attrName, function(value) {
               if (isString(value)) {
+<<<<<<< HEAD
                 var oldValue = destination[scopeName];
                 recordChanges(scopeName, value, oldValue);
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
                 destination[scopeName] = value;
               }
             });
@@ -9720,8 +9790,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             destination[scopeName] = parentGet(scope);
 
             removeWatch = scope.$watch(parentGet, function parentValueWatchAction(newParentValue) {
+<<<<<<< HEAD
               var oldValue = destination[scopeName];
               recordChanges(scopeName, newParentValue, oldValue);
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
               destination[scopeName] = newParentValue;
             }, parentGet.literal);
 
@@ -9742,6 +9815,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
         }
       });
 
+<<<<<<< HEAD
       function recordChanges(key, currentValue, previousValue) {
         if (isFunction(destination.$onChanges) && currentValue !== previousValue) {
           // If we have not already scheduled the top level onChangesQueue handler then do so now
@@ -9769,6 +9843,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
         changes = undefined;
       }
 
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
       return removeWatchCollection.length && function removeWatches() {
         for (var i = 0, ii = removeWatchCollection.length; i < ii; ++i) {
           removeWatchCollection[i]();
@@ -15455,15 +15531,26 @@ function $ParseProvider() {
  * [Kris Kowal's Q](https://github.com/kriskowal/q).
  *
  * $q can be used in two fashions --- one which is more similar to Kris Kowal's Q or jQuery's Deferred
+<<<<<<< HEAD
  * implementations, and the other which resembles ES6 (ES2015) promises to some degree.
+=======
+ * implementations, and the other which resembles ES6 promises to some degree.
+>>>>>>> 8efbc9c... added angular and test for it to work
  *
  * # $q constructor
  *
  * The streamlined ES6 style promise is essentially just using $q as a constructor which takes a `resolver`
+<<<<<<< HEAD
  * function as the first argument. This is similar to the native Promise implementation from ES6,
  * see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
  *
  * While the constructor-style use is supported, not all of the supporting methods from ES6 promises are
+=======
+ * function as the first argument. This is similar to the native Promise implementation from ES6 Harmony,
+ * see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+ *
+ * While the constructor-style use is supported, not all of the supporting methods from ES6 Harmony promises are
+>>>>>>> 8efbc9c... added angular and test for it to work
  * available yet.
  *
  * It can be used like so:
@@ -18601,10 +18688,13 @@ function $SceProvider() {
 function $SnifferProvider() {
   this.$get = ['$window', '$document', function($window, $document) {
     var eventSupport = {},
+<<<<<<< HEAD
         // Chrome Packaged Apps are not allowed to access `history.pushState`. They can be detected by
         // the presence of `chrome.app.runtime` (see https://developer.chrome.com/apps/api_index)
         isChromePackagedApp = $window.chrome && $window.chrome.app && $window.chrome.app.runtime,
         hasHistoryPushState = !isChromePackagedApp && $window.history && $window.history.pushState,
+=======
+>>>>>>> 8efbc9c... added angular and test for it to work
         android =
           toInt((/android (\d+)/.exec(lowercase(($window.navigator || {}).userAgent)) || [])[1]),
         boxee = /Boxee/i.test(($window.navigator || {}).userAgent),
@@ -18649,7 +18739,11 @@ function $SnifferProvider() {
       // so let's not use the history API also
       // We are purposefully using `!(android < 4)` to cover the case when `android` is undefined
       // jshint -W018
+<<<<<<< HEAD
       history: !!(hasHistoryPushState && !(android < 4) && !boxee),
+=======
+      history: !!($window.history && $window.history.pushState && !(android < 4) && !boxee),
+>>>>>>> 8efbc9c... added angular and test for it to work
       // jshint +W018
       hasEvent: function(event) {
         // IE9 implements 'input' event it's so fubared that we rather pretend that it doesn't have
@@ -19931,7 +20025,11 @@ function formatNumber(number, pattern, groupSep, decimalSep, fractionSize) {
 
     // format the integer digits with grouping separators
     var groups = [];
+<<<<<<< HEAD
     if (digits.length >= pattern.lgSize) {
+=======
+    if (digits.length > pattern.lgSize) {
+>>>>>>> 8efbc9c... added angular and test for it to work
       groups.unshift(digits.splice(-pattern.lgSize).join(''));
     }
     while (digits.length > pattern.gSize) {
@@ -22167,7 +22265,11 @@ var inputType = {
         }]);
      </script>
      <form name="myForm" ng-controller="DateController as dateCtrl">
+<<<<<<< HEAD
         <label for="exampleInput">Pick a time between 8am and 5pm:</label>
+=======
+        <label for="exampleInput">Pick a between 8am and 5pm:</label>
+>>>>>>> 8efbc9c... added angular and test for it to work
         <input type="time" id="exampleInput" name="input" ng-model="example.value"
             placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required />
         <div role="alert">
