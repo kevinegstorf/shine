@@ -16,10 +16,11 @@ gem 'bower-rails'
 gem 'faker'
 
 group :development, :test do
-  # other gems...
+  # rest of gems...
 
   gem 'rspec-rails'
   gem 'poltergeist'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'teaspoon-jasmine'
 end
