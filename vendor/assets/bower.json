@@ -2,8 +2,12 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap-sass-official": "latest",
+<<<<<<< HEAD
     "angular": "~> 1.5",
     "angular-mocks": "latest"
+=======
+    "angular": "~> 1.5"
+>>>>>>> 554603911df65a364c9bbd89c0e7c02d01603eda
   },
   "resolutions": {
     "angular": "1.5"

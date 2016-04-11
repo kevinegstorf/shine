@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   resources :customers, only: [:index]
   get 'angular_test', to: 'angular_test#index'
+<<<<<<< HEAD
   # The priority is based upon order of creation: first created ->
   # highest priority.
+=======
+  # The priority is based upon order of creation: first created -> highest priority.
+>>>>>>> 554603911df65a364c9bbd89c0e7c02d01603eda
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
